@@ -1,0 +1,12 @@
+<p>user-details works!</p>
+<div>
+    @if(userService.user){
+        <h2>Detalles</h2>
+        <p>ID:{{ userService.user.id }}</p>
+        <p>Nombre: {{ userService.user.name}}</p>
+        <p>Nombre: {{ userService.user.email}}</p>
+        <p>Nombre: {{ userService.user.website}}</p>
+        <button (click)="this.limpiar()">Limpiar</button>
+    }
+
+</div>

@@ -1,0 +1,18 @@
+<p>user-list works!!</p>
+
+
+<ul>
+        @for (user of userlistservice.users; track $index ){
+             <li>
+            <p>ID:{{ user.id }} Nombre: {{ user.name}}
+                <button (click)="getUser(user.id)">Detalles</button>
+            </p> 
+               
+    </li>
+
+        } @empty {
+        <li>Error!!!</li>
+        }
+</ul>
+
+

@@ -1,0 +1,107 @@
+<p>tres works!</p>
+<h1>Formulario de usuario</h1>
+<form [formGroup]="this.userForm" (submit)="handleSubmit()">
+    <fieldset>
+        <h2>Usuario </h2><br>
+        <label for='form-name'>Nombre: </label><br>
+        <input type ='text' id='form-name' placeholder="Nombre" formControlName="name" maxlength="50" size="50"  required>
+        @if(name.invalid && name.touched){
+            <h3 class="error">Nombre no válido</h3>
+        }
+        <br>
+    
+        <label for='form-user-name'>Nombre de Usurario: </label><br>
+        <input type ='text' id='form-user-name' placeholder="Nombre de Usuario" formControlName="username" maxlength="50" size="50"    >
+        @if(username.invalid && username.touched){
+            <h3 class="error">Nombre de usuario no válido</h3>
+        }
+        <br>
+    
+        <label for='form-email'>email: </label><br>
+        <input type ='text' id='email' placeholder="email" formControlName="email" maxlength="50" size="50"    >
+        @if(email.invalid && email.touched){
+            <h3 class="error" >email no válido</h3>
+        }
+        <br><br> 
+        <fieldset>
+            <h3>Dirección</h3>
+            <label for='form-street'>Calle: </label><br>
+            <input type ='text' id='form-street' placeholder="Calle" formControlName="street" maxlength="50" size="50"    >
+            @if(street.invalid && email.touched){
+                <h3 class="error" >Calle no válida</h3>
+            }
+            <br>
+            
+            <label for='form-suite'>suite: </label><br>
+            <input type ='text' id='form-suite' placeholder="suite" formControlName="suite" maxlength="50" size="50"    >
+            @if(suite.invalid && suite.touched){
+                <h3 class="error" >Suite no válida</h3>
+            }
+            <br>
+            <label for='form-city'>Ciudad: </label><br>
+            <input type ='text' id='form-city' placeholder="Ciudad" formControlName="city" maxlength="50" size="50"    >
+            @if(city.invalid && city.touched){
+                <h3 class="error" >Ciudad no válida</h3>
+            }
+            <br>
+            <label for='form-zipcode'>Código Postal: </label><br>
+            <input type ='text' id='form-zipcode' placeholder="Código Postal" formControlName="zipcode" maxlength="50" size="50"    >
+            @if(zipcode.invalid && zipcode.touched){
+                <h3 class="error" >Código Postal no válido</h3>
+            }
+            <br><br> 
+            <fieldset>
+                <h4>Geo Localización</h4>
+                <label for='form-lat'>Latitud: </label><br>
+                <input type ='text' id='form-lat' placeholder="Latitud" formControlName="lat" maxlength="50" size="50"    >
+                @if(lat.invalid && lat.touched){
+                    <h3 class="error" >Latitud no válida</h3>
+                }
+                <br>
+                <label for='form-lng'>Longitud: </label><br>
+                <input type ='text' id='form-lng' placeholder="Longitud" formControlName="lng" maxlength="50" size="50"    >
+                @if(lng.invalid && lng.touched){
+                    <h3 class="error" >Longitud no válida</h3>
+                }
+                <br>
+            </fieldset>
+        </fieldset><br><br>
+        <label for='form-phone'>Teléfono: </label><br>
+        <input type ='text' id='form-phone' placeholder="Teléfono" formControlName="phone" maxlength="11" size="11"    >
+        @if(phone.invalid && phone.touched){
+            <h3 class="error" >Teléfono no válido</h3>
+        }
+        <br>
+        <label for='form-website'>website: </label><br>
+        <input type ='text' id='form-website' placeholder="website" formControlName="website" maxlength="50" size="50"    >
+        @if(website.invalid && website.touched){
+            <h3 class="error" >Website no válida</h3>
+        }
+        <br>
+        <br><br> 
+        <fieldset>
+            <h3>Companía</h3><br>
+            <label for='form-companyName'>Nombre Companía: </label><br>
+            <input type ='text' id='form-companyName' placeholder="Nombre Companía" formControlName="companyName" maxlength="50" size="50"    >
+            @if(companyName.invalid && companyName.touched){
+                <h3 class="error" >Nombre de la companía no válido</h3>
+            }
+            <br>
+            <label for='form-catchPhrase'>Motto: </label><br>
+            <input type ='text' id='form-catchPhrase' placeholder="Motto" formControlName="catchPhrase" maxlength="50" size="50"   >
+            @if(catchPhrase.invalid && catchPhrase.touched){
+                <h3 class="error" >Motto no válido</h3>
+            }
+            <br>
+             <label for='form-bs'>bs: </label><br>
+            <input type ='text' id='form-bs' placeholder="bs" formControlName="bs" maxlength="50" size="50"    >
+            @if(bs.invalid && bs.touched){
+                <h3 class="error" >bs no válido</h3>
+            }
+            <br>
+             
+        </fieldset>
+    </fieldset>
+    <button [disabled]="userForm.invalid">Enviar!!!</button>
+
+</form>
